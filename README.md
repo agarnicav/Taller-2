@@ -68,7 +68,10 @@ Desarrollar un programa que ingrese un número flotante n y separe su parte ente
 
 # Punto 3 
 Desarrollar un programa que permita ingresar dos números enteros y determinar si se tratan de números espejos.
-
+1. Se crean dos listas vacías y se declaran las variables n1 y n2 donde se almacenarán los números a analizar.
+2. A partir de un ciclo for se van a dividir los elementos de n1, antes transformado a string, que serán añadidos a la lista1. 
+3. Se intercambia el orden de los elementos de la lista2 al añadir los dígitos del segundo número a la misma también con un ciclo for.
+4. Finalmente se comparan ambas listas y con un condicional se establece que si son iguales se imprima el mensaje de que los números son espejos, y en el caso contrario no lo son. 
 #### Código:
     if __name__ == "__main__":
 
