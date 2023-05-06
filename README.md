@@ -66,6 +66,78 @@ Desarrollar un programa que ingrese un número flotante n y separe su parte ente
           n = float(input("Ingrese un número real: ")) # Ingreso del número entero
           digitosNumero(n) # Llamado de la función digitosNumero y envío del parámetro n 
 
+# Punto 3 
+Desarrollar un programa que permita ingresar dos números enteros y determinar si se tratan de números espejos.
+
+#### Código:
+    if __name__ == "__main__":
+
+    n1 = int(input("Ingrese el primer número entero: ")) # Ingreso del primer número
+    n2 = int(input("Ingrese el segundo número entero: ")) # Ingreso del segundo número 
+    
+    lista1 = [] # Creación de la primera lista en donde guardaremos los dígitos del primer número al final de la lista  
+    lista2 = [] # Creación de la segunda lista en donde guardaremos los datos del segundo número al principio de la lista 
+
+    for i in str(n1):
+        lista1.append(i) # Adición de los dígitos del primer número al final en la lista
+    for i in str(n2): 
+        lista2.insert(0,i)  # Adición de los dígitos del segundo número al principio en la lista 
+
+    if lista1 == lista2: # Validación de la igualdad de las 2 listas, en caso de ser iguales los números se considerarán como espejo y en caso de no serlo no se considerarán como espejo
+        print("Los números son espejo")
+    else:
+        print("Los números no son espejo")
+# Punto 4
+Diseñar una función que permita calcular una aproximación de la función coseno alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Taylor. nota: use math para traer la función coseno y mostrar la diferencia entre el valor real y la aproximación. Con cuántos valores de la serie, se tienen errores del 10%, 1%, 0.1% y 0.001%.
+#### Código:
+    import math
+    def aproximacion_coseno (x:float) -> float:
+        sumatoria = 0
+        for i in range (0, n):
+            sumatoria += math.pow(-1, i) * (math.pow(x, 2*i)/ math.factorial(2*i))
+        return sumatoria
+
+    if __name__ == "__main__":
+      n = (int(input("Número de términos de la serie de Maclaurin: ")))
+      x = (float(input("Valor real para calcular la aproximación de la función coseno alrededor de 0: ")))
+      sumatoria = aproximacion_coseno (x, n)
+  
+    print("Resultado usando la función creada: "+ str(sumatoria))
+    print("Resultado usando la función importada de math: "+ str(math.exp(x))) 
+    diferencia = math.exp(x) - sumatoria
+    print("La diferencia entre el valor real y la aproximación es: " + str(diferencia))
+
+# Punto 5
+Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos numeros enteros. Abordar el problema desde la perpectiva iterativa como recursiva.
+
+# Punto 6
+Desarrollar un programa que determine si en una lista no existen elementos repetidos.
+
+####Código:
+def Creador_listas (n: str) -> list: #Funcion para crear la lista a examinar. 
+    lista = []
+    
+    for i in range(t): #Ciclo for para ingresar los elementos de la lista.
+        n = input("Ingresar elementos de la lista: ")
+        lista.append(n)
+    return lista
+
+if __name__ == "__main__": #Función principal con variables definidas.
+    n = 0
+    t = int(input("Insertar tamaño deseado para la lista: "))
+    lista_creada = Creador_listas (n)#Llamando a la función que creamos para hacer la lista. 
+    print(lista_creada)
+
+    for i in lista_creada :
+        if lista_creada.count(i) == 1:
+           bandera = True
+        else:
+            bandera = False
+    if bandera == True:
+        print("En la lista " + str(lista_creada) + " no hay elementos repetidos")
+    else:
+        print("En la lista " + str(lista_creada) + " existen elementos repetidos")
+            
 # Punto 7 
 
 Desarrollar un programa que determine si en una lista se encuentra una cadena de caracteres con dos o más vocales. Si la cadena existe debe imprimirla y si no existe debe imprimir 'No existe'.
