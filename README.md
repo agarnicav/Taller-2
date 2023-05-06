@@ -114,29 +114,29 @@ Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos n
 Desarrollar un programa que determine si en una lista no existen elementos repetidos.
 
 ####Código:
-def Creador_listas (n: str) -> list: #Funcion para crear la lista a examinar. 
-    lista = []
+    def Creador_listas (n: str) -> list: #Funcion para crear la lista a examinar. 
+        lista = []
     
-    for i in range(t): #Ciclo for para ingresar los elementos de la lista.
-        n = input("Ingresar elementos de la lista: ")
-        lista.append(n)
-    return lista
+        for i in range(t): #Ciclo for para ingresar los elementos de la lista.
+            n = input("Ingresar elementos de la lista: ")
+            lista.append(n)
+        return lista
 
-if __name__ == "__main__": #Función principal con variables definidas.
-    n = 0
-    t = int(input("Insertar tamaño deseado para la lista: "))
-    lista_creada = Creador_listas (n)#Llamando a la función que creamos para hacer la lista. 
-    print(lista_creada)
+    if __name__ == "__main__": #Función principal con variables definidas.
+        n = 0
+        t = int(input("Insertar tamaño deseado para la lista: "))
+        lista_creada = Creador_listas (n)#Llamando a la función que creamos para hacer la lista. 
+        print(lista_creada)
 
-    for i in lista_creada :
-        if lista_creada.count(i) == 1:
-           bandera = True
+        for i in lista_creada :
+            if lista_creada.count(i) == 1:
+               bandera = True
+            else:
+                bandera = False
+        if bandera == True:
+            print("En la lista " + str(lista_creada) + " no hay elementos repetidos")
         else:
-            bandera = False
-    if bandera == True:
-        print("En la lista " + str(lista_creada) + " no hay elementos repetidos")
-    else:
-        print("En la lista " + str(lista_creada) + " existen elementos repetidos")
+            print("En la lista " + str(lista_creada) + " existen elementos repetidos")
             
 # Punto 7 
 
