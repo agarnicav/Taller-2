@@ -4,12 +4,8 @@
 
 Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número.
 
-1. Para solucionar este punto se  pide ingresar un numero entero, y se crea una lista vacia en la cual se almacenaran los digitos que compongan el numero.
-[![Lisa-vac-a-y-n.png](https://i.postimg.cc/yxXPMnBy/Lisa-vac-a-y-n.png)](https://postimg.cc/xN8MHvXX)
-
-2. Para poder desglosar el numero se crea un ciclo for en el cual se recorre el numero n ingresado.
-[![for.png](https://i.postimg.cc/cHGkPvwZ/for.png)](https://postimg.cc/B8NCKQmw)
-
+1. Para solucionar este punto se  pide ingresar un numero entero, y se crea una lista vacia en la cual se almacenaran los digitos que compongan el numero
+2. Para poder desglosar el numero se crea un bucle for en el cual se recorre el numero n ingresado.
 3. Al separar los digitos se agregan en la lista vacia y se imprimira la lista con los digitos.
 
 Codigo : 
@@ -23,24 +19,52 @@ Codigo :
  
        print("Los dígitos que componen al número son: "+str(lista)) # Impresión del resultado
        
-# Punto 2
+       
+# Punto 2 
+
 Desarrollar un programa que ingrese un número flotante n y separe su parte entera de la parte decimal, y luego entrege los digitos tanto de la parte entera como de la decimal.
 
-# Punto 3
+1. Para el desarrolo de este punto se define una función llamada "digitosNumero" que recibe un parámetro "n" , que es el número real que se desea descomponer en sus dígitos.
+2. Se crean dos listas vacías  "listaEntera" y "listaDecimal", que se utilizarán para almacenar los dígitos de la parte entera y decimal del número real "n".
+3.  Se inicia  "bandera" en "True" para indicar que se está en la parte entera del número.
+4. Se imprimen dos mensajes para mostrar como se divide el numero .
+       5. Se crea un bucle "for", se verifica si la variable "bandera" es verdadera y si el carácter que se esta recorriendo en el bucle no es un punto decimal. Si ambas condiciones se cumplen, el carácter se agrega a la lista "listaEntera" utilizando la función "append()".
 
-Desarrollar un programa que permita ingresar dos números enteros y determinar si se tratan de números espejos.
+5. Si el carácter actual en el bucle es un punto decimal, la variable "bandera" se establece en "False" para indicar que se está en la parte decimal del número.
 
-# Punto 4
+6. Si la variable "bandera" es falsa,  los dígitos se agregan a la lista "listaDecimal" utilizando la función "append()".
 
-Diseñar una función que permita calcular una aproximación de la función coseno alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Taylor. nota: use math para traer la función coseno y mostrar la diferencia entre el valor real y la aproximación. Con cuántos valores de la serie, se tienen errores del 10%, 1%, 0.1% y 0.001%.
+7. See imprimen las dos listas "listaEntera" y "listaDecimal" en líneas separadas para mostrar los dígitos de la parte entera y decimal del número, respectivamente.
 
-# Punto 5
+8.  Se solicita ingresar un número real y se llama a la función "digitosNumero" para descomponer el número y mostrar sus dígitos.
 
-Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos numeros enteros. Abordar el problema desde la perpectiva iterativa como recursiva.
+        def digitosNumero(n:float):
+        # Función que separa los dígitos de un número n recibido como parámetro, en su parte entera y su parte decimal
 
-# Punto 6
+        listaEntera = [] # Creación de una lista vacia donde se guardarán los dígitos de la parte entera del número
+        listaDecimal = [] # Creación de una lista vacia donde se guardarán los dígitos de la parte decimal del número
+        bandera = True
 
-Desarrollar un programa que determine si en una lista no existen elementos repetidos.
+        print("Los dígitos que componen al número son:") 
+        print("PARTE ENTERA")
+
+        for i in str(n):  
+            if bandera and i != ".":
+            listaEntera.append(i) # Separando los dígitos de la parte entera y agragandolos en el filan de la lista correspondiente 
+            elif i == ".":
+                bandera = False # Validando si nos encontramos en la parte decimal del número, en caso de serlo, obviar el punto
+                continue
+        
+            if bandera == False:
+                listaDecimal.append(i) # Separando los dígitos de la parte decimal y agregandolos en el final de la lista correspondiente
+    
+        print(listaEntera) # Impresión de los dígitos de la parte entera
+        print("PARTE DECIMAL") 
+        print(listaDecimal) # Impresión de los dígitos de la parte decimal 
+
+         if __name__ == "__main__":
+          n = float(input("Ingrese un número real: ")) # Ingreso del número entero
+          digitosNumero(n) # Llamado de la función digitosNumero y envío del parámetro n 
 
 # Punto 7 
 
