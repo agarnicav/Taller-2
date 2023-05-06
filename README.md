@@ -90,14 +90,8 @@ Desarrollar un programa que permita ingresar dos números enteros y determinar s
         print("Los números son espejo")
     else:
         print("Los números no son espejo")
-
 # Punto 4
 Diseñar una función que permita calcular una aproximación de la función coseno alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Taylor. nota: use math para traer la función coseno y mostrar la diferencia entre el valor real y la aproximación. Con cuántos valores de la serie, se tienen errores del 10%, 1%, 0.1% y 0.001%.
-1. Para resolver este punto el primer paso es importar el módulo math que se empleará más adelante para llamar a la función cos().
-2. Luego se crea la función aproximacion_coseno que tiene como argumento a x: valor real para calcular la aproximación de la función coseno alrededor de 0.
-3. Dentro de la función en un ciclo for que tendrá n(términos de la serie de Maclaurin) iteraciones se va a calcular la aproximación.
-4. Luego se calcula la diferencia entre el resultado obtenido con nuestra función y el resultado que arroja la función cos().
-5. Se imprimen los resultados y el valor de la diferencia.
 #### Código:
     import math
     def aproximacion_coseno (x:float) -> float:
@@ -118,6 +112,39 @@ Diseñar una función que permita calcular una aproximación de la función cose
 
 # Punto 5
 Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos numeros enteros. Abordar el problema desde la perpectiva iterativa como recursiva.
+
+1. Se solicita al usuario que ingrese el tamaño de la lista que desea crear.
+
+2. Se crea una lista vacía en la que se guardarán los elementos ingresados por el usuario.
+
+3. Se utiliza un ciclo for para iterar n veces (donde n es el tamaño de la lista ingresado por el usuario) y solicitar al usuario que ingrese los elementos de la lista. Cada elemento ingresado se agrega al final de la lista.
+
+4. Se utiliza otro ciclo for para iterar por cada elemento en la lista y comprobar si aparece una sola vez en la lista. Si esto es así, se establece una variable llamada bandera en True. Si un elemento aparece más de una vez en la lista, se establece bandera en False y se rompe el ciclo.
+
+5. Finalmente, se comprueba el valor de bandera. Si es True, se imprime el mensaje "En la lista no existen elementos repetidos". Si es False, se imprime el mensaje "En la lista existen elementos repetidos".
+
+
+Codigo: 
+
+    if __name__ == "__main__":
+
+        n = int(input("Ingrese el tamaño de la lista: ")) # Ingreso del tamaño de la lista 
+        lista = [] # Creación de la lista donde se guaradarán los elementos 
+        for i in range(n):
+            num = float(input("Ingrese un número: ")) # Ingreso de los elementos 
+            lista.append(num) # Adición de los elementos al final de la lista 
+    
+        for i in lista:
+            if lista.count(i) == 1: # Comprobación de que el elemento i se encuentre solo una vez en la lista, en caso de ser asi, bandera será igual a True y en caso de no serlo será igual a False
+                bandera = True 
+            else:
+                bandera = False 
+                break
+    
+        if bandera == True: # Validación del valor de bandera, en caso de ser True se dirá que no existen elementos repetidos en la lista y en caso de ser False se dirá que si existen elementos repertidos en la lista
+            print("En la lista no existen elementos repetidos")
+        else:
+            print("En la lista existen elementos repetidos")
 
 # Punto 6
 Desarrollar un programa que determine si en una lista no existen elementos repetidos.
