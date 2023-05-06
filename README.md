@@ -90,8 +90,14 @@ Desarrollar un programa que permita ingresar dos números enteros y determinar s
         print("Los números son espejo")
     else:
         print("Los números no son espejo")
+
 # Punto 4
 Diseñar una función que permita calcular una aproximación de la función coseno alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Taylor. nota: use math para traer la función coseno y mostrar la diferencia entre el valor real y la aproximación. Con cuántos valores de la serie, se tienen errores del 10%, 1%, 0.1% y 0.001%.
+1. Para resolver este punto el primer paso es importar el módulo math que se empleará más adelante para llamar a la función cos().
+2. Luego se crea la función aproximacion_coseno que tiene como argumento a x: valor real para calcular la aproximación de la función coseno alrededor de 0.
+3. Dentro de la función en un ciclo for que tendrá n(términos de la serie de Maclaurin) iteraciones se va a calcular la aproximación.
+4. Luego se calcula la diferencia entre el resultado obtenido con nuestra función y el resultado que arroja la función cos().
+5. Se imprimen los resultados y el valor de la diferencia.
 #### Código:
     import math
     def aproximacion_coseno (x:float) -> float:
