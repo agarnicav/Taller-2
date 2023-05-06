@@ -8,6 +8,8 @@ Desarrollar un programa que ingrese un número entero n y separe todos los digit
 [![Lisa-vac-a-y-n.png](https://i.postimg.cc/yxXPMnBy/Lisa-vac-a-y-n.png)](https://postimg.cc/xN8MHvXX)
 
 2. Para poder desglosar el numero se crea un ciclo for en el cual se recorre el numero n ingresado.
+[![for.png](https://i.postimg.cc/cHGkPvwZ/for.png)](https://postimg.cc/B8NCKQmw)
+
 3. Al separar los digitos se agregan en la lista vacia y se imprimira la lista con los digitos.
 
 Codigo : 
