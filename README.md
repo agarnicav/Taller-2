@@ -117,6 +117,9 @@ Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos n
 
 # Punto 6
 Desarrollar un programa que determine si en una lista no existen elementos repetidos.
+1. El primer paso para este punto crear una función con la cual haremos nuestra lista. Creamos una lista vacía y en la variable t almacenamos el número de datos que deseamos tenga la lista. Luego a partir de un ciclo for los elementos son ingresados en la lista.
+2. Ya con la lista creada con otro ciclo for la recorremos y con la función integrada cunt() obtendremos el número de cada elemento.
+3. Establecemos una bandera q en caso de ser igual a uno el programa imprimirá que no hay elementos repetidos en la lista, de lo contrario imprimirá que existen elementos repetidos.
 
 ####Código:
         
