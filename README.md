@@ -28,15 +28,15 @@ Desarrollar un programa que ingrese un número flotante n y separe su parte ente
 2. Se crean dos listas vacías  "listaEntera" y "listaDecimal", que se utilizarán para almacenar los dígitos de la parte entera y decimal del número real "n".
 3.  Se inicia  "bandera" en "True" para indicar que se está en la parte entera del número.
 4. Se imprimen dos mensajes para mostrar como se divide el numero .
-       5. Se crea un bucle "for", se verifica si la variable "bandera" es verdadera y si el carácter que se esta recorriendo en el bucle no es un punto decimal. Si ambas condiciones se cumplen, el carácter se agrega a la lista "listaEntera" utilizando la función "append()".
+5. Se crea un bucle "for", se verifica si la variable "bandera" es verdadera y si el carácter que se esta recorriendo en el bucle no es un punto decimal. Si ambas condiciones se cumplen, el carácter se agrega a la lista "listaEntera" utilizando la función "append()".
 
-5. Si el carácter actual en el bucle es un punto decimal, la variable "bandera" se establece en "False" para indicar que se está en la parte decimal del número.
+6. Si el carácter actual en el bucle es un punto decimal, la variable "bandera" se establece en "False" para indicar que se está en la parte decimal del número.
 
-6. Si la variable "bandera" es falsa,  los dígitos se agregan a la lista "listaDecimal" utilizando la función "append()".
+7. Si la variable "bandera" es falsa,  los dígitos se agregan a la lista "listaDecimal" utilizando la función "append()".
 
-7. See imprimen las dos listas "listaEntera" y "listaDecimal" en líneas separadas para mostrar los dígitos de la parte entera y decimal del número, respectivamente.
+8. Se imprimen las dos listas "listaEntera" y "listaDecimal" en líneas separadas para mostrar los dígitos de la parte entera y decimal del número, respectivamente.
 
-8.  Se solicita ingresar un número real y se llama a la función "digitosNumero" para descomponer el número y mostrar sus dígitos.
+9.  Se solicita ingresar un número real y se llama a la función "digitosNumero" para descomponer el número y mostrar sus dígitos.
 
         def digitosNumero(n:float):
         # Función que separa los dígitos de un número n recibido como parámetro, en su parte entera y su parte decimal
@@ -90,6 +90,8 @@ Desarrollar un programa que permita ingresar dos números enteros y determinar s
         print("Los números son espejo")
     else:
         print("Los números no son espejo")
+        
+        
 # Punto 4
 Diseñar una función que permita calcular una aproximación de la función coseno alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Taylor. nota: use math para traer la función coseno y mostrar la diferencia entre el valor real y la aproximación. Con cuántos valores de la serie, se tienen errores del 10%, 1%, 0.1% y 0.001%.
 #### Código:
