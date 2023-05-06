@@ -121,7 +121,7 @@ Desarrollar un programa que determine si en una lista no existen elementos repet
 2. Ya con la lista creada con otro ciclo for la recorremos y con la función integrada cunt() obtendremos el número de cada elemento.
 3. Establecemos una bandera q en caso de ser igual a uno el programa imprimirá que no hay elementos repetidos en la lista, de lo contrario imprimirá que existen elementos repetidos.
 
-####Código:
+#### Código:
         
     def Creador_listas (n: str) -> list: #Funcion para crear la lista a examinar. 
         lista = []
