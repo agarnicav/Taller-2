@@ -1,5 +1,24 @@
 # Taller-2
 
+# Punto 1 
+
+Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número.
+
+1. Para solucionar este punto se  pide ingresar un numero entero, y se crea una lista vacia en la cual se almacenaran los digitos que compongan el numero
+2. Para poder desglosar el numero se crea un ciclo for en el cual se recorre el numero n ingresado.
+3. Al separar los digitos se agregan en la lista vacia y se imprimira la lista con los digitos.
+
+Codigo : 
+
+       n = int(input("Ingrese un número entero: ")) # Ingreso del número entero 
+
+       lista = [] # Creación de una lista vacia en donde se guardarán los dígitos que componen el número
+
+       for i in str(n):  
+           lista.append(i) # Separando los dígitos y agregandolos al final en la lista 
+ 
+       print("Los dígitos que componen al número son: "+str(lista)) # Impresión del resultado
+       
 
 # Punto 7 
 
