@@ -294,6 +294,93 @@ Desarrollar un programa que dadas dos listas determine que elementos tiene la pr
             #La raíz cúbica del menor número
             raiz_cubica = v[4]**(1/3) # Como los números fueron ordenados de mayor a menor anteriormente, solo se debe hallar la raíz del             último elemento en el arreglo
             print("Raíz cúbica del menor número: " + str(raiz_cubica))
+            
+# Punto 10
+Desarrollar un algoritmo que determine si una matriz es mágica. Se dice que una matriz cuadrada es mágica si la suma de cada una de sus filas, de cada una de sus columnas y de cada diagonal es igual.
 
+#### Código:
+    def crearMatriz(n:int) -> list:
+        # Función que realiza el llenado de una matriz cuadrada de tamaño n recibido como parámetro 
+        matriz = [] # Creación de la matriz a la cual se le agregarán las fulas con los elementos 
+        fila = [] # Creación de la fila en donde agregaremos los elementos 
+        for i in range(n):
+            for j in range(n):
+                num = float(input("Ingrese el elemento ["+str(i+1)+"]["+str(j+1)+"] : ")) # Ingreso de los elementos que compondrán a las         filas y despues a la matriz
+                fila.append(num) # Adición de cada uno de los elementos al final de la fila 
+            matriz.append(fila) # Adición de cada fila al final de la matriz
+            fila = [] # Vaciado de la fila para que pueda volver a ser llenada
+        return matriz # Retorno de la matriz creada
 
+    def imprimirMatriz(n:int,matriz:list):
+        # Función que imprime las filas de una matriz recibida como parámetro de tamaño n también recibido como parámetro
+        for i in range(n): print(matriz[i]) # Impresión de cada fila de la matriz
 
+def matrizMagica(n:int,matriz:list) -> bool:
+    # Función que realiza la sumatoria de las filas, columnas y diagonales de una matriz recibida como parámetro y comprueba si cada suma es igual a n * ( n ** 2 + 1 ) // 2 siendo n el tamaño de la matriz recibido como parámetro 
+    sumaFilas = 0 
+    sumaColumnas = 0 
+    sumaDiagonal1 = 0 
+    sumaDiagonal2 = 0 
+    bandera = True 
+    sumaMagica = n * ( n ** 2 + 1 ) // 2 # Formula que indica el resultado que debe tener cada suma de filas, columnas y diagonales para que la matriz se considere como mágica
+
+    for i in range(n):
+        for j in range(n):
+            sumaFilas = sumaFilas + matriz[i][j] # Cálculo de la sumatoria de cada una de las filas de la matriz
+        if sumaFilas != sumaMagica: # Comparación del resultado de la suma de filas con el valor que debería ser para que se considere la matriz como mágica
+            bandera = False
+            break 
+        sumaFilas = 0
+
+    for i in range(n):
+        for j in range(n):
+            sumaColumnas = sumaColumnas + matriz[j][i] # Cálculo de la sumatoria de cada una de las columnas de la matriz
+        if sumaColumnas != sumaMagica: # Comparación del resultado de la suma de filas con el valor que debería ser para que se considere la matriz como mágica
+            bandera = False
+            break
+        sumaColumnas = 0 
+    
+    for i in range(n):
+        for j in range(n):
+            if i == j:
+                sumaDiagonal1 = sumaDiagonal1 + matriz[i][j] # Cálculo de la sumatoria de la diagonal principal de la matriz
+    if sumaDiagonal1 != sumaMagica: # Comparación del resultado de la suma de filas con el valor que debería ser para que se considere la matriz como mágica
+        bandera = False
+
+    for i in range(n):
+        sumaDiagonal2 = sumaDiagonal2 + matriz[i][n-i-1] # Cálculo de la sumatoria de la diagonal secundaria de la matriz
+    if sumaDiagonal2 != sumaMagica: # Comparación del resultado de la suma de filas con el valor que debería ser para que se considere la matriz como mágica
+        bandera = False
+
+    return bandera 
+
+def elementosRepetidos(n:int,matriz:list) -> bool:
+    # Función que comprueba si los elementos ingresados en un matriz recibida como parámetros se repiten  
+    repetidos = [] # creación de una lista vacia a la cual ingresaremos los datos de la matriz y comprobaremos si sus elementos se repiten 
+    for i in range(n): 
+        for j in range(n):
+            repetidos.append(matriz[i][j]) # Ingreso de los elementos de la matriz a la lista 
+
+    for i in repetidos:
+        if repetidos.count(i) == 1: # Validación de que cada elemento en la lista exista solo una vez, en caso de serlo bandera = True y en caso de no serlo bandera = False
+            bandera = True
+        else: 
+            bandera = False 
+            break
+    return bandera # Retorno del valor de bandera 
+    
+
+if __name__ == "__main__":
+    n = int(input("Ingrese el tamaño de la matriz: ")) # Ingreso del tamaño que tendrá la matriz (para que pueda ser mágica debe ser cuadarada)
+    matrizM = crearMatriz(n) # Llamado de la función crearMatriz y envío del parámetro n 
+    print("\nMATRIZ INGRESADA") 
+    imprimirMatriz(n,matrizM) # Impresión de la matriz haciendo el llamado de la función imprimirMatriz y envío de los parámtros n y matrizM
+    magica = matrizMagica(n,matrizM) # Comprobación de que la matriz sea mágica haciendo el llamado de la función matrizMagica y envio de los parámetros n y matrizM
+    elementos = elementosRepetidos(n,matrizM) # Comprobación de que no existan elementos repetidos en la matriz haciendo el llamado de la función elementosRepetidos y envio de los parámetros n y matrizM
+    if elementos == True: # Validación de que no existan elementos repetidos en la matriz, en caso de que si se repitan, la matriz no podrá ser mágica
+        if magica == True: # Validación de que la matriz sea mágica 
+            print("\nLa matriz ingresada es mágica")
+        else:
+            print("\nLa matriz ingresada no es mágica")
+    else:
+        print("\nLa matriz ingresada no es mágica debido a que hay elementos repetidos")
