@@ -345,6 +345,22 @@ Desarrollar un programa que dadas dos listas determine que elementos tiene la pr
  # Punto 9
  Resolver el punto 7 del taller 1 usando operaciones con vectores.
  
+1. En este punto lo primero que hicimos fue una función para crear el vector con 5 elementos.
+
+2. Llamamos a nuestra función
+
+3. Para el promedio utilizamos la función sum() para conocer la sumatoria de los números y luego dividimos entre 5
+
+4. Para el promedio multiplicativo empleamos un ciclo for para multiplocar todos números del vector. Luego le hallamos la ríz quinta al resultado.
+
+5. Con la función sort() organizamos los elementos e orden ascendente, con los números organizados de esta manera imprimimos el número que ocupa la posición dos que sería el elemento cetral y por tanto la mediana.
+
+6. Utilizando reverse los reorganizamos en orden descendente.
+
+7. Con los elementos organizados de esta manera ubicamos el menor, que corresponderá al índice [5-1], o sea estará ubicado de último mientras q el índice cero será el mayor. Elevamos el mayor número a la potencia del menor.
+
+8. Con esta misma lógica al menor número se le halla la raíz cuadrada elevándolo a la 1/3.
+ 
  #### Código:
     v = [] #Crear un arreglo vacío para el vector
     for i in range (5): # Ciclo for para ingresar los elementos que formarán el vector
