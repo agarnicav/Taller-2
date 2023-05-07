@@ -1,6 +1,11 @@
 # Taller-2
+##   Grupo Attack On Coding
 
-# Logo 
+## Integrantes 
+Lisa Maria	Forjan Despaigne
+Ana Maria 	Garnica Vargas
+Dilan Mateo	Torres Muñoz
+## Logo 
 
 [![Atack-on-Codding-edited.jpg](https://i.postimg.cc/c47bzvy0/Atack-on-Codding-edited.jpg)](https://postimg.cc/jL5cwdSF)
 
