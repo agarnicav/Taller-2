@@ -259,19 +259,19 @@ Desarrollar un programa que dadas dos listas determine que elementos tiene la pr
                 elementos = float(input("Inserta elementos del vector: "))
                 v.append(elementos)
             return v
-    if __name__ == "__main__":
-        elementos = 0
-        v = Crear_vector(elementos)
-        print("Vector: " + str(v)) 
+        if __name__ == "__main__":
+            elementos = 0
+            v = Crear_vector(elementos)
+            print("Vector: " + str(v)) 
     
-    #El promedio
-        sumatoria = sum(v) #Es la suma de todos los elementos del vector dividido entre la cantidad de elementos. Se utiliza la función           sum() 
-        promedio = sumatoria/5
-        print("El promedio es: " + str(promedio))
+            #El promedio
+            sumatoria = sum(v) #Es la suma de todos los elementos del vector dividido entre la cantidad de elementos. Se utiliza la                   función sum() 
+            promedio = sumatoria/5
+            print("El promedio es: " + str(promedio))
 
-    #El promedio multiplicativo (multilplica todos y luego calcula la raíz de la cantidad de operandos)
-        mult = 1
-        for i in v:#Ciclo for para multiplicar todos los elementos dentro del arreglo y luego se halla la raíz 5ta, ya que son 5                   operandos.
+            #El promedio multiplicativo (multilplica todos y luego calcula la raíz de la cantidad de operandos)
+            mult = 1
+            for i in v:#Ciclo for para multiplicar todos los elementos dentro del arreglo y luego se halla la raíz 5ta, ya que son 5                   operandos.
             mult *= i 
             promedio_multiplicativo = mult**(1/5)
             print("El promedio multiplicativo es:" + str(promedio_multiplicativo))
