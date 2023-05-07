@@ -127,6 +127,23 @@ Desarrollar un programa que permita ingresar dos números enteros y determinar s
 # Punto 4
 Diseñar una función que permita calcular una aproximación de la función coseno alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Taylor. nota: use math para traer la función coseno y mostrar la diferencia entre el valor real y la aproximación. Con cuántos valores de la serie, se tienen errores del 10%, 1%, 0.1% y 0.001%.
 
+1. El primer paso será el de importar la libreria math de python.
+
+![image](https://user-images.githubusercontent.com/124721286/236654386-42633384-c0e8-445a-a4a4-f49c5ad67f38.png)
+
+2. Luego de esto definiremos una función la cual calculará la aproximación de la función coseno de un número x y haciendo uso de n terminos de la serie de Taylos (ambos datos recibidos como parámetros). Por medio del ciclo for programaremos una serie de Taylor la cual nos calculará una sumatoria y esta la retornaremos al finalizar el ciclo.
+
+![image](https://user-images.githubusercontent.com/124721286/236654452-fec42159-cab1-47e0-87a8-5124e6af888c.png)
+
+3. Como tercer paso crearemos una función que calcule los terminos que se necesitan para pasar los umbrales de error para un 10%, 1%, 0.1% y 0.001%. Esto mediante el ciclo while, en donde el error mientras sea mayor al error deseado, recalcularemos la sumatoria de la función pero haciendo uso de los terminos m que empiezan en 1 e irán aumentado de a uno hasta que se pase el umbral.
+
+![image](https://user-images.githubusercontent.com/124721286/236654534-0a25a1fc-e880-48b9-84bc-9aaed165a01d.png)
+
+4. Por último definimos un main en el cual ingresamos el número de terminos a usar y el valor de x. Haremos el llamado de las funciones y enviaremos sus correspondientes parámetros. 
+
+![image](https://user-images.githubusercontent.com/124721286/236654573-cd75a962-7810-43b6-b368-5de54bffcc2d.png)
+
+
 #### Código:
     import math # Importación de la libreria math de python 
 
@@ -163,15 +180,7 @@ Diseñar una función que permita calcular una aproximación de la función cose
 # Punto 5
 Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos numeros enteros. Abordar el problema desde la perpectiva iterativa como recursiva.
 
-1. En este punto primero se abordó el cálculo del mcm desde la perspectiva iterativa. 
-2. Se crea una función que recibirá como parámetros os números a los q se les desea calcular el mcm y la cantidad de iteraciones (estas estaran dadas por la comparación del mayor entre ambos números). 
-3. En cada iteración se divide i entre x y y, usando un condicional se determina que i es múltiplo de ambos números si su módulo es cero al dividir entre ambos números, de lo contrario se suma uno a i y continúa el ciclo.
-
-4. Al finalizar la función retorna el valor final de i. Desde la perspectiva recursiva igualmente se define la función, que va a recibir los mismos parámetros mencionados anteriormente. Luego planteamos un caso base en que x o y es igual a uno. 
-5. Se plantea el condicional de que si el módulo de i entre x y y es cero entonces i es múltiplo, de lo contrario se altera el valor de i en 1.
-6. El usuario podrá seleccionar cual de las funciones desea utilizar para lo cual podrá elegir las opciones uno o dos definidas en la función principal como True. Si no ingresa una opción válida se imprimirá un mensaje.
-
-       def minimoComunMultiploIterativo(x:int,y:int,iterador:int) -> int:
+    def minimoComunMultiploIterativo(x:int,y:int,iterador:int) -> int:
         # Función que calcula el mínimo común multiplo de dos números recibidos como parámetros por medio de las iteraciones 
         i = iterador # Inicialización de un iterador que comienza desde el número mayor entre x y 
         bandera = True
@@ -182,17 +191,17 @@ Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos n
                 i += 1
         return i # Retorno del valor i 
 
-       def minimoComunMultiploRecursivo(x:int,y:int,iterador:int) -> int:
+    def minimoComunMultiploRecursivo(x:int,y:int,iterador:int) -> int:
         # Funcion que calcula el mínimo común multiplo de dos números recibidos como parámetros por medi de la recursividad 
-         i = iterador # Inicialización de un iterador que comienza desde el número mayor entre x y 
-         if x == 1 or y == 1: # Caso base para no entrar en un bucle infinito, se trata del caso de cuando x o y es uno, en este caso el mcm se calcula realizando x * y
+    i = iterador # Inicialización de un iterador que comienza desde el número mayor entre x y 
+       if x == 1 or y == 1: # Caso base para no entrar en un bucle infinito, se trata del caso de cuando x o y es uno, en este caso el mcm se calcula realizando x * y
             return x * y
-          elif i % x == 0 and i % y == 0: # Validación de que el número i sea multiplo de ambos números, en caso de sero se retorna el valor de i y se llamará a la función pero alterando el parámetro de "iterador" en uno 
+        elif i % x == 0 and i % y == 0: # Validación de que el número i sea multiplo de ambos números, en caso de sero se retorna el valor de i y se llamará a la función pero alterando el parámetro de "iterador" en uno 
             return i
         else: 
             return minimoComunMultiploRecursivo(x,y,iterador+1)
 
-        if __name__ == "__main__":
+    if __name__ == "__main__":
         x = int(input("Ingrese el número 1 : ")) # Ingreso del primer número entero
         y = int(input("Ingrese el número 2 : ")) # Ingreso del segundo número entero 
         lista = [x,y] # Creación de una lista en donde se guardarán los valores de x y y
@@ -345,21 +354,21 @@ Desarrollar un programa que dadas dos listas determine que elementos tiene la pr
  # Punto 9
  Resolver el punto 7 del taller 1 usando operaciones con vectores.
  
-1. En este punto lo primero que hicimos fue una función para crear el vector con 5 elementos.
+ 1. En este punto lo primero que hicimos fue una función para crear el vector con 5 elementos.
 
-2. Llamamos a nuestra función
+ 2. Llamamos a nuestra función
 
-3. Para el promedio utilizamos la función sum() para conocer la sumatoria de los números y luego dividimos entre 5
+ 3. Para el promedio utilizamos la función sum() para conocer la sumatoria de los números y luego dividimos entre 5
 
-4. Para el promedio multiplicativo empleamos un ciclo for para multiplocar todos números del vector. Luego le hallamos la ríz quinta al resultado.
+ 4. Para el promedio multiplicativo empleamos un ciclo for para multiplocar todos números del vector. Luego le hallamos la ríz quinta al resultado.
 
-5. Con la función sort() organizamos los elementos e orden ascendente, con los números organizados de esta manera imprimimos el número que ocupa la posición dos que sería el elemento cetral y por tanto la mediana.
+ 5. Con la función sort() organizamos los elementos e orden ascendente, con los números organizados de esta manera imprimimos el número que ocupa la posición dos que sería el elemento cetral y por tanto la mediana.
 
-6. Utilizando reverse los reorganizamos en orden descendente.
+ 6. Utilizando reverse los reorganizamos en orden descendente.
 
-7. Con los elementos organizados de esta manera ubicamos el menor, que corresponderá al índice [5-1], o sea estará ubicado de último mientras q el índice cero será el mayor. Elevamos el mayor número a la potencia del menor.
+ 7. Con los elementos organizados de esta manera ubicamos el menor, que corresponderá al índice [5-1], o sea estará ubicado de último mientras q el índice cero será el mayor. Elevamos el mayor número a la potencia del menor.
 
-8. Con esta misma lógica al menor número se le halla la raíz cuadrada elevándolo a la 1/3.
+ 8. Con esta misma lógica al menor número se le halla la raíz cuadrada elevándolo a la 1/3.
  
  #### Código:
     v = [] #Crear un arreglo vacío para el vector
