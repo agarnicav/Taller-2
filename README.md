@@ -163,6 +163,14 @@ Diseñar una función que permita calcular una aproximación de la función cose
 # Punto 5
 Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos numeros enteros. Abordar el problema desde la perpectiva iterativa como recursiva.
 
+1. En este punto primero se abordó el cálculo del mcm desde la perspectiva iterativa. 
+2. Se crea una función que recibirá como parámetros os números a los q se les desea calcular el mcm y la cantidad de iteraciones (estas estaran dadas por la comparación del mayor entre ambos números). 
+3. En cada iteración se divide i entre x y y, usando un condicional se determina que i es múltiplo de ambos números si su módulo es cero al dividir entre ambos números, de lo contrario se suma uno a i y continúa el ciclo.
+
+4. Al finalizar la función retorna el valor final de i. Desde la perspectiva recursiva igualmente se define la función, que va a recibir los mismos parámetros mencionados anteriormente. Luego planteamos un caso base en que x o y es igual a uno. 
+5. Se plantea el condicional de que si el módulo de i entre x y y es cero entonces i es múltiplo, de lo contrario se altera el valor de i en 1.
+6. El usuario podrá seleccionar cual de las funciones desea utilizar para lo cual podrá elegir las opciones uno o dos definidas en la función principal como True. Si no ingresa una opción válida se imprimirá un mensaje.
+
     def minimoComunMultiploIterativo(x:int,y:int,iterador:int) -> int:
         # Función que calcula el mínimo común multiplo de dos números recibidos como parámetros por medio de las iteraciones 
         i = iterador # Inicialización de un iterador que comienza desde el número mayor entre x y 
