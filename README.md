@@ -114,50 +114,8 @@ Diseñar una función que permita calcular una aproximación de la función cose
 
 # Punto 5
 Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos numeros enteros. Abordar el problema desde la perpectiva iterativa como recursiva.
-1. En este punto primero se abordó el cálculo del mcm desde la perspectiva iterativa. Se crea una función que recibirá como parámetros os números a los q se les desea calcular el mcm y la cantidad de iteraciones (estas estaran dadas por la comparación del mayor entre ambos números). En cada iteración se divide i entre x y y, usando un condicional se determina que i es múltiplo de ambos números si su módulo es cero al dividir entre ambos números, de lo contrario se suma uno a i y continúa el ciclo. Al finalizar la función retorna el valor final de i.
-2. Desde la perspectiva recursiva igualmente se define la función, que va a recibir los mismos parámetros mencionados anteriormente. Luego planteamos un caso base en que x o y es igual a uno. Se plantea el condicional de que si el módulo de i entre x y y es cero entonces i es múltiplo, de lo contrario se altera el valor de i en 1. 
-3. El usuario podrá seleccionar cual de las funciones desea utilizar para lo cual podrá elegir las opciones uno o dos definidas en la función principal como True. Si no ingresa una opción válida se imprimirá un mensaje.
-def minimoComunMultiploIterativo(x:int,y:int,iterador:int) -> int:
-    
-        # Función que calcula el mínimo común multiplo de dos números recibidos como parámetros por medio de las iteraciones 
-        i = iterador # Inicialización de un iterador que comienza desde el número mayor entre x y 
-        bandera = True
-        while bandera:
-            if i % x == 0 and i % y == 0: # Validación de que el número i sea multiplo de ambos números, en caso de sero bandera = False y             en caso de no serlo i aumentará de 1 en uno 
-                bandera = False
-            else: 
-                i += 1
-        return i # Retorno del valor i 
 
-        def minimoComunMultiploRecursivo(x:int,y:int,iterador:int) -> int:
-        # Funcion que calcula el mínimo común multiplo de dos números recibidos como parámetros por medi de la recursividad 
-        i = iterador # Inicialización de un iterador que comienza desde el número mayor entre x y 
-        if x == 1 or y == 1: # Caso base para no entrar en un bucle infinito, se trata del caso de cuando x o y es uno, en este caso el           mcm se calcula realizando x * y
-            return x * y
-        elif i % x == 0 and i % y == 0: # Validación de que el número i sea multiplo de ambos números, en caso de sero se retorna el valor         de i y se llamará a la función pero alterando el parámetro de "iterador" en uno 
-            return i
-        else: 
-            return minimoComunMultiploRecursivo(x,y,iterador+1)
 
-        if __name__ == "__main__":
-        x = int(input("Ingrese el número 1 : ")) # Ingreso del primer número entero
-        y = int(input("Ingrese el número 2 : ")) # Ingreso del segundo número entero 
-        lista = [x,y] # Creación de una lista en donde se guardarán los valores de x y y
-        iterador = max(lista) # Asignación del valor de iterador, el cual será el número mayo entre x y 
-        bandera = True
-        while bandera or op != 1 and op != 2: # Ciclo do while que valida que se esté ingresando la opción correcta 
-            bandera = False 
-            op = int(input("Ingrese la opción que desea ejecutar \n1. Calculo del mcm con iteraciones \n2. Calculo del mcm con                     recursividad \n")) # Ingreso de la opción que el usuario desea ejecutar 
-            if op != 1 and op != 2: # Mostrar mensaje en caso de que la opción ingresada no sea correcta
-                print("La opción ingresada no es válida")
-        if op == 1: # Caso en donde se desea calcular el mcm haciendo uso de la función iterativa 
-            mcm = minimoComunMultiploIterativo(x,y,iterador) # Llamado de la función minimoComunMultiploIterativo y envío de los                       parámetros x, y, iterador
-            print("El mínimo comun múltiplo calculado con iteraciones entre "+str(x)+" y "+str(y)+" es: "+str(mcm))
-        else: # Caso en donde se desea calcular el mcm haciendo uso de la función recursiva
-            mcm = minimoComunMultiploRecursivo(x,y,iterador) # Llamado de la función minimoComunMultiplorecursivo y envío de los                   parámetros x, y, iterador
-            print("El mínimo comun múltiplo calculado con recursividad entre "+str(x)+" y "+str(y)+" es: "+str(mcm))
-
-    
 
 # Punto 6
 Desarrollar un programa que determine si en una lista no existen elementos repetidos.
@@ -340,15 +298,15 @@ Desarrollar un programa que dadas dos listas determine que elementos tiene la pr
 # Punto 10
 Desarrollar un algoritmo que determine si una matriz es mágica. Se dice que una matriz cuadrada es mágica si la suma de cada una de sus filas, de cada una de sus columnas y de cada diagonal es igual.
 
-1. El primer paso será crear una función la cual realizará el llenado de la matriz de tamaño n, el cual será asignado por el usuario y se enviará como parámetro a la función.
+1. El primer paso será crear una función la cual realizará el llenado de la matriz de tamaño n, el cual será asignado por el usuario y se enviará como parámetro a la función. Primero se hará el llenado de las filas, donde cada elementos se guradará en la variable "num" y se utilizará el método .append para agregar este valor al final de la lista. Después de esto agregaremos cada fila a nuestra matriz haciendo nuevamente uso del método append. La función retornará la matriz creada 
 
-2. Luego, crearemos otra función la cual tendrá como objetivo imprimir la matriz anteriormente llenada y recibida como parámetro en esta nueva función.
+2. En el segundo paso, crearemos otra función la cual tendrá como objetivo imprimir la matriz anteriormente llenada y recibida como parámetro en esta nueva función. Imprimiremos fila por fila de la matriz haciendo uso del ciclo for; esto para que al momento de imprimirse se pueda visualizar como una matriz. 
 
-3. Como tercer paso lo que haremos será crear una nueva función que determine si la matriz ingresada anteriormente, es una matriz mágica, esto se consigue realizando la suma de cada una de las filas, columnas, la diagonal principal y la diagonal secundaria. Si cada una de estas sumas nos da como resultado el valor de n * ( n ^ 2 + 1 ) // 2 siendo n el tamaño de la matriz (La cual debe ser cuadrada y no tener elementos repetidos), podremos decir que la matriz es mágica.
+3. Como tercer paso lo que haremos será crear una nueva función que determine si la matriz ingresada anteriormente, es una matriz mágica, esto se consigue realizando la suma de cada una de las filas, columnas, la diagonal principal y la diagonal secundaria. Si cada una de estas sumas nos da como resultado el valor de n * ( n ^ 2 + 1 ) // 2 siendo n el tamaño de la matriz (La cual debe ser cuadrada y no tener elementos repetidos), podremos decir que la matriz es mágica. En caso de que todas las sumas den como resultado el valor anteriormente mencionado, retornaremos una variable bandera como True. Y en caso de no serlo retornaremos una variable bandera como False. 
 
-4. Posteriormente crearemos una nueva función que determinará si en la matriz existen elementos repetidos, esto, guardando todos los elementos en una lista y luego verificando que cada uno de los elementos se encuentre solo una vez en dicha lista. Si efectivamente solo se encuentran una vez, existe la posibilidad de que la matriz sea mágica; Sin embargo, si al menos un elemento se repite en la lista podremos decir que la matriz no es mágica.
+4. Posteriormente crearemos una nueva función que determinará si en la matriz existen elementos repetidos, esto, guardando todos los elementos en una lista y luego verificando que cada uno de los elementos se encuentre solo una vez en dicha lista haciendo uso del método .count. Si efectivamente solo se encuentran una vez, existe la posibilidad de que la matriz sea mágica y retornaremos una variable bandera como True; Sin embargo, si al menos un elemento se repite en la lista podremos decir que la matriz no es mágica y retornaremos una variable bandera como False.
 
-5. Por último, definiremos una función main en donde asignaremos el tamaño de la matriz, para luego enviar este valor como parámetro a las funciones correspondientes. Realizaremos el llamado de las 4 funciones creadas y haremos las validaciones de si existen elementos repetidos en la matriz y si se determinó que la matriz fuese mágica. Dependiendo del caso se mostrarán los mensajes pertinentes. 
+5. Por último, definiremos una función main en donde asignaremos el tamaño de la matriz, para luego enviar este valor como parámetro a las funciones correspondientes. Realizaremos el llamado de las 4 funciones creadas y haremos las validacionesde las banderas retornadas por las funciones "matrizMagica" y "elementosRepetidos". En caso de que ambas banderas sean verdaderas mostraremos unmensaje indicando que la matriz ingresada es mágica. En caso de que la bandera de "matrizMagica" sea falsa pero la bandera de "elementosrepetidos" sea verdadera, mostraremos un mensaje indicando que la matriz ingresada no es mágica. Y, en caso de que la bandera de "elementosRepetidos" sea falsa mostraremos que la matriz no es mágica debido a que existen elementos repetidos
 
 #### Código:
     def crearMatriz(n:int) -> list:
