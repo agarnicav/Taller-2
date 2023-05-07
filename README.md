@@ -1,30 +1,31 @@
 # Taller-2
-[![Atack-on-Codding-edited.jpg](https://i.postimg.cc/c47bzvy0/Atack-on-Codding-edited.jpg)](https://postimg.cc/jL5cwdSF)
 
 # Punto 1 
 
 Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número.
 
-1. Para solucionar este punto se  pide ingresar un numero entero, y se crea una lista vacia en la cual se almacenaran los digitos que compongan el numero.
+1. Para solucionar este punto lo primero que haremos será crear una función que separe los dígitos de un número recibido como parámetro. Esto lo conseguiremos convirtiendo el número a un dato tipo string y por medio de los ciclos for, recorriendo dicho número. En cada iteración del recorrido guradaremos cada dígito en una lista. Luego de tener la lista la retornaremos.
 
-![punto 1 1](https://user-images.githubusercontent.com/124607325/236652926-e3e95dbb-edf7-48e7-9a9d-3d0dceb48cbb.png)
+![image](https://user-images.githubusercontent.com/124721286/236653952-85d41bfa-f945-4d14-9954-5d4510492a47.png)
 
-2. Para poder desglosar el numero se crea un bucle for en el cual se recorre el numero n ingresado.
+2. Por último asignaremos una función main en donde digitaremos el número y lo enviaremos como argumento a la función "digitosNumero". Al imprimir la lista, obtendremos cada dígito que compone al número
 
-![punto 2 2](https://user-images.githubusercontent.com/124607325/236652932-82fb99df-cf65-4d38-b2cc-d89492ca89d1.png)
+![image](https://user-images.githubusercontent.com/124721286/236653994-e0d5cc9e-3f5e-4474-bfc5-7fe8eee17798.png)
 
-3. Al separar los digitos se agregan en la lista vacia y se imprimira la lista con los digitos.
 
 Codigo : 
 
-       n = int(input("Ingrese un número entero: ")) # Ingreso del número entero 
+    def digitosNumero(n:int) -> list:
+    # Función que separa los dígitos que componen un número n recibido como parámetro 
+    lista = [] # Creación de una lista vacia en donde se guardarán los dígitos que componen el número
+    for i in str(n):  
+        lista.append(i) # Separando los dígitos y agregandolos al final en la lista 
+    return lista # Retorno de la lista con los digitos que componen al número
 
-       lista = [] # Creación de una lista vacia en donde se guardarán los dígitos que componen el número
-
-       for i in str(n):  
-           lista.append(i) # Separando los dígitos y agregandolos al final en la lista 
- 
-       print("Los dígitos que componen al número son: "+str(lista)) # Impresión del resultado
+    if __name__ == "__main__":
+        n = int(input("Ingrese un número entero: ")) # Ingreso del número entero 
+        lista = digitosNumero(n) # Llamado de la función digitosNumero y envío del parámetro n 
+        print("Los dígitos que componen al número son: "+str(lista)) # Impresión del resultado
        
        
 # Punto 2 
@@ -88,24 +89,22 @@ Desarrollar un programa que ingrese un número flotante n y separe su parte ente
 
 # Punto 3 
 Desarrollar un programa que permita ingresar dos números enteros y determinar si se tratan de números espejos.
-1. Se crean dos listas vacías y se declaran las variables n1 y n2 donde se almacenarán los números a analizar.
-![Punto 3 1](https://user-images.githubusercontent.com/124607325/236653270-a621b46c-0bfa-408e-bc5e-b62088843464.png)
+1. El primer paso srá crear una función que guarde los dígitos de dos números recibidos como praámetros en dos lista vacias, en donde a la primera se le ingresarán los dígitos al final de la lista por medio del método .append y la segunda se le agregarán los dígitos del segundo número al principio de la lista por medio del método .insert.   
 
-2. A partir de un ciclo for se van a dividir los elementos de n1, antes transformado a string, que serán añadidos a la lista1. 
-![punto 3 2](https://user-images.githubusercontent.com/124607325/236653280-62b42744-a7ab-4d80-af28-9d6df58384b8.png)
+![image](https://user-images.githubusercontent.com/124721286/236654095-f93c1073-5308-43bc-951c-eee1a95bab35.png)
 
-3. Se intercambia el orden de los elementos de la lista2 al añadir los dígitos del segundo número a la misma también con un ciclo for.
+2. En la misma función compararemos las listas. Si estas son iguales imprimiremos un mensaje indicando que los números son espejo, y si no son iguales indicaremos que los números no son espejo.
 
-4. Finalmente se comparan ambas listas y con un condicional se establece que si son iguales se imprima el mensaje de que los números son espejos, y en el caso contrario no lo son. 
-![punto 3 3](https://user-images.githubusercontent.com/124607325/236653305-08469b59-ea9c-4245-88e1-12a97d0c9000.png)
+![image](https://user-images.githubusercontent.com/124721286/236654131-c29a613a-530f-44e4-ac03-24b17c4026a9.png)
+
+3. Finalmente asignamos una función main en donde digitaremos los dos números y los enviaremos como parámetros a la función "numerosEspejos" a la cual también llamaremos. 
+
+![image](https://user-images.githubusercontent.com/124721286/236654173-80e8055f-ddfd-443d-8e10-b7fb3dc97b65.png)
 
 
 #### Código:
-    if __name__ == "__main__":
-
-    n1 = int(input("Ingrese el primer número entero: ")) # Ingreso del primer número
-    n2 = int(input("Ingrese el segundo número entero: ")) # Ingreso del segundo número 
-    
+    def numerosEspejo(n1:int,n2:int):
+    # Función que determina si dos números recibidos como parámtro son espejo uno del otro 
     lista1 = [] # Creación de la primera lista en donde guardaremos los dígitos del primer número al final de la lista  
     lista2 = [] # Creación de la segunda lista en donde guardaremos los datos del segundo número al principio de la lista 
 
@@ -118,27 +117,48 @@ Desarrollar un programa que permita ingresar dos números enteros y determinar s
         print("Los números son espejo")
     else:
         print("Los números no son espejo")
+
+    if __name__ == "__main__":
+        n1 = int(input("Ingrese el primer número entero: ")) # Ingreso del primer número
+        n2 = int(input("Ingrese el segundo número entero: ")) # Ingreso del segundo número 
+        numerosEspejo(n1,n2) # Llamado de la función numerosEspejo y envío de los parámetros n1 y n2 
         
         
 # Punto 4
 Diseñar una función que permita calcular una aproximación de la función coseno alrededor de 0 para cualquier valor x (real), utilizando los primeros n términos de la serie de Taylor. nota: use math para traer la función coseno y mostrar la diferencia entre el valor real y la aproximación. Con cuántos valores de la serie, se tienen errores del 10%, 1%, 0.1% y 0.001%.
+
 #### Código:
-    import math
-    def aproximacion_coseno (x:float) -> float:
+    import math # Importación de la libreria math de python 
+
+    def aproximacion_coseno (x:float,n:int) -> float:
+        # Función que realiza el cálculo aproximado de la función coseno para un número x recibido como parámetro y haciendo uso de n terminos también recibidos como parámetros
         sumatoria = 0
-        for i in range (0, n):
-            sumatoria += math.pow(-1, i) * (math.pow(x, 2*i)/ math.factorial(2*i))
-        return sumatoria
+        for i in range (n):
+            sumatoria += math.pow(-1, i) * (math.pow(x, 2*i)/ math.factorial(2*i)) # Serie de Taylor para la función coseno 
+        return sumatoria  # Retorno del valor aproximado 
+
+    def error_coseno(x:float,deseado:float):
+      # Función que calcula el error entre el valor real y el aproximado de la función coseno para un número x recibido como parámetro y devuelve el número de términos que deden usarlse para conseguir un error deseado (también recibido como parámetro)
+      m = 1 # Se inicia con 1 termino 
+      error = 100 # Se inicia con un error del 100 % 
+      while error >= deseado: # Mientras que el error supere al deseado aumentaremos los términos de uno uno y realizaremos el cálculo de la aproximación del coseno con el nuevo termino conseguido
+         error = abs((math.cos(x) - aproximacion_coseno(x,m)) / math.cos(x)) * 100 
+         m += 1
+      print("\nEs necesario usar "+str(m-1)+" terminos para obtener un error del "+str(deseado)+" %")
 
     if __name__ == "__main__":
-      n = (int(input("Número de términos de la serie de Maclaurin: ")))
-      x = (float(input("Valor real para calcular la aproximación de la función coseno alrededor de 0: ")))
-      sumatoria = aproximacion_coseno (x, n)
-  
-    print("Resultado usando la función creada: "+ str(sumatoria))
-    print("Resultado usando la función importada de math: "+ str(math.exp(x))) 
-    diferencia = math.exp(x) - sumatoria
-    print("La diferencia entre el valor real y la aproximación es: " + str(diferencia))
+      n = (int(input("Número de términos de la serie de Maclaurin: "))) # Ingreso del número de terminos que usaremos inicialmente para calcular el valor aproximado de la función coseno 
+      x = (float(input("\nValor real para calcular la aproximación de la función coseno alrededor de 0: "))) # Ingreso del número al cual calcularemos el valor aproximado de la función coseno
+      sumatoria = aproximacion_coseno (x, n) # Llamado de la función aproximación_coseno y envío de los parámetros x y n 
+      print("\nResultado usando la función creada: "+ str(sumatoria))
+      print("\nResultado usando la función importada de math: "+ str(math.cos(x))) 
+      diferencia = abs(math.cos(x) - sumatoria) # Cálculo de la diferencia entre el valor real y el valor aproximado 
+      print("\nLa diferencia entre el valor real y la aproximación es: " + str(diferencia))
+
+      error_coseno(x,10) # LLamado de la función error_coseno y envío de los parámetros x y 10 
+      error_coseno(x,1) # LLamado de la función error_coseno y envío de los parámetros x y 1
+      error_coseno(x,0.1) # LLamado de la función error_coseno y envío de los parámetros x y 0.1 
+      error_coseno(x,0.001) # LLamado de la función error_coseno y envío de los parámetros x y 0.001
 
 # Punto 5
 Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos numeros enteros. Abordar el problema desde la perpectiva iterativa como recursiva.
