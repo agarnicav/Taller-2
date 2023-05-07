@@ -4,8 +4,14 @@
 
 Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número.
 
-1. Para solucionar este punto se  pide ingresar un numero entero, y se crea una lista vacia en la cual se almacenaran los digitos que compongan el numero
+1. Para solucionar este punto se  pide ingresar un numero entero, y se crea una lista vacia en la cual se almacenaran los digitos que compongan el numero.
+
+![punto 1 1](https://user-images.githubusercontent.com/124607325/236652926-e3e95dbb-edf7-48e7-9a9d-3d0dceb48cbb.png)
+
 2. Para poder desglosar el numero se crea un bucle for en el cual se recorre el numero n ingresado.
+
+![punto 2 2](https://user-images.githubusercontent.com/124607325/236652932-82fb99df-cf65-4d38-b2cc-d89492ca89d1.png)
+
 3. Al separar los digitos se agregan en la lista vacia y se imprimira la lista con los digitos.
 
 Codigo : 
@@ -24,20 +30,33 @@ Codigo :
 
 Desarrollar un programa que ingrese un número flotante n y separe su parte entera de la parte decimal, y luego entrege los digitos tanto de la parte entera como de la decimal.
 
-1. Para el desarrolo de este punto se define una función llamada "digitosNumero" que recibe un parámetro "n" , que es el número real que se desea descomponer en sus dígitos.
-2. Se crean dos listas vacías  "listaEntera" y "listaDecimal", que se utilizarán para almacenar los dígitos de la parte entera y decimal del número real "n".
-3.  Se inicia  "bandera" en "True" para indicar que se está en la parte entera del número.
-4. Se imprimen dos mensajes para mostrar como se divide el numero .
-5. Se crea un bucle "for", se verifica si la variable "bandera" es verdadera y si el carácter que se esta recorriendo en el bucle no es un punto decimal. Si ambas condiciones se cumplen, el carácter se agrega a la lista "listaEntera" utilizando la función "append()".
+1. Para el desarrolo de este punto se define una función llamada "digitosNumero" que recibe un parámetro "n" , que es el número real que se desea descomponer en sus dígitos.![punto 2 2](https://user-images.githubusercontent.com/124607325/236652990-b5b8c071-a48a-40b7-ae50-de97ff769412.png)
 
-6. Si el carácter actual en el bucle es un punto decimal, la variable "bandera" se establece en "False" para indicar que se está en la parte decimal del número.
+2. Se crean dos listas vacías  "listaEntera" y "listaDecimal", que se utilizarán para almacenar los dígitos de la parte entera y decimal del número real "n". Y Se inicia  "bandera" en "True" para indicar que se está en la parte entera del número.
+3. Se imprimen dos mensajes para mostrar como se divide el numero .
 
-7. Si la variable "bandera" es falsa,  los dígitos se agregan a la lista "listaDecimal" utilizando la función "append()".
+![punto 2 2](https://user-images.githubusercontent.com/124607325/236653026-b8cccaa2-4f53-431f-b66c-235392a4edd2.png)
 
-8. Se imprimen las dos listas "listaEntera" y "listaDecimal" en líneas separadas para mostrar los dígitos de la parte entera y decimal del número, respectivamente.
+4. Se crea un bucle "for", se verifica si la variable "bandera" es verdadera y si el carácter que se esta recorriendo en el bucle no es un punto decimal. Si ambas condiciones se cumplen, el carácter se agrega a la lista "listaEntera" utilizando la función "append()".
 
-9.  Se solicita ingresar un número real y se llama a la función "digitosNumero" para descomponer el número y mostrar sus dígitos.
+![punto 2 3](https://user-images.githubusercontent.com/124607325/236653063-879c4fe5-f7ae-413e-a353-43b3ceda4b68.png)
 
+
+5. Si el carácter actual en el bucle es un punto decimal, la variable "bandera" se establece en "False" para indicar que se está en la parte decimal del número.
+
+6. Si la variable "bandera" es falsa,  los dígitos se agregan a la lista "listaDecimal" utilizando la función "append()".
+
+![Punto 2 4](https://user-images.githubusercontent.com/124607325/236653098-1d051a3b-ec9b-45fc-9020-4f726366ed1d.png)
+
+
+7. Se imprimen las dos listas "listaEntera" y "listaDecimal" en líneas separadas para mostrar los dígitos de la parte entera y decimal del número, respectivamente.
+![punto 2 5](https://user-images.githubusercontent.com/124607325/236653221-ba43e506-5c54-4d24-b547-20b58d96d05f.png)
+
+8.  Se solicita ingresar un número real y se llama a la función "digitosNumero" para descomponer el número y mostrar sus dígitos.
+![punto 2 6](https://user-images.githubusercontent.com/124607325/236653224-d9110547-bbd1-41b7-a241-92e1ed1ff0ad.png)
+
+
+#### Codigo : 
         def digitosNumero(n:float):
         # Función que separa los dígitos de un número n recibido como parámetro, en su parte entera y su parte decimal
 
@@ -69,9 +88,17 @@ Desarrollar un programa que ingrese un número flotante n y separe su parte ente
 # Punto 3 
 Desarrollar un programa que permita ingresar dos números enteros y determinar si se tratan de números espejos.
 1. Se crean dos listas vacías y se declaran las variables n1 y n2 donde se almacenarán los números a analizar.
+![Punto 3 1](https://user-images.githubusercontent.com/124607325/236653270-a621b46c-0bfa-408e-bc5e-b62088843464.png)
+
 2. A partir de un ciclo for se van a dividir los elementos de n1, antes transformado a string, que serán añadidos a la lista1. 
+![punto 3 2](https://user-images.githubusercontent.com/124607325/236653280-62b42744-a7ab-4d80-af28-9d6df58384b8.png)
+
 3. Se intercambia el orden de los elementos de la lista2 al añadir los dígitos del segundo número a la misma también con un ciclo for.
+
 4. Finalmente se comparan ambas listas y con un condicional se establece que si son iguales se imprima el mensaje de que los números son espejos, y en el caso contrario no lo son. 
+![punto 3 3](https://user-images.githubusercontent.com/124607325/236653305-08469b59-ea9c-4245-88e1-12a97d0c9000.png)
+
+
 #### Código:
     if __name__ == "__main__":
 
@@ -115,13 +142,58 @@ Diseñar una función que permita calcular una aproximación de la función cose
 # Punto 5
 Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos numeros enteros. Abordar el problema desde la perpectiva iterativa como recursiva.
 
+    def minimoComunMultiploIterativo(x:int,y:int,iterador:int) -> int:
+        # Función que calcula el mínimo común multiplo de dos números recibidos como parámetros por medio de las iteraciones 
+        i = iterador # Inicialización de un iterador que comienza desde el número mayor entre x y 
+        bandera = True
+        while bandera:
+            if i % x == 0 and i % y == 0: # Validación de que el número i sea multiplo de ambos números, en caso de sero bandera = False y en caso de no serlo i aumentará de 1 en uno 
+                bandera = False
+            else: 
+                i += 1
+        return i # Retorno del valor i 
 
+    def minimoComunMultiploRecursivo(x:int,y:int,iterador:int) -> int:
+        # Funcion que calcula el mínimo común multiplo de dos números recibidos como parámetros por medi de la recursividad 
+    i = iterador # Inicialización de un iterador que comienza desde el número mayor entre x y 
+       if x == 1 or y == 1: # Caso base para no entrar en un bucle infinito, se trata del caso de cuando x o y es uno, en este caso el mcm se calcula realizando x * y
+            return x * y
+        elif i % x == 0 and i % y == 0: # Validación de que el número i sea multiplo de ambos números, en caso de sero se retorna el valor de i y se llamará a la función pero alterando el parámetro de "iterador" en uno 
+            return i
+        else: 
+            return minimoComunMultiploRecursivo(x,y,iterador+1)
+
+    if __name__ == "__main__":
+        x = int(input("Ingrese el número 1 : ")) # Ingreso del primer número entero
+        y = int(input("Ingrese el número 2 : ")) # Ingreso del segundo número entero 
+        lista = [x,y] # Creación de una lista en donde se guardarán los valores de x y y
+        iterador = max(lista) # Asignación del valor de iterador, el cual será el número mayo entre x y 
+        bandera = True
+        while bandera or op != 1 and op != 2: # Ciclo do while que valida que se esté ingresando la opción correcta 
+            bandera = False 
+            op = int(input("Ingrese la opción que desea ejecutar \n1. Calculo del mcm con iteraciones \n2. Calculo del mcm con recursividad \n")) # Ingreso de la opción que el usuario desea ejecutar 
+            if op != 1 and op != 2: # Mostrar mensaje en caso de que la opción ingresada no sea correcta
+                print("La opción ingresada no es válida")
+        if op == 1: # Caso en donde se desea calcular el mcm haciendo uso de la función iterativa 
+            mcm = minimoComunMultiploIterativo(x,y,iterador) # Llamado de la función minimoComunMultiploIterativo y envío de los parámetros x, y, iterador
+            print("El mínimo comun múltiplo calculado con iteraciones entre "+str(x)+" y "+str(y)+" es: "+str(mcm))
+        else: # Caso en donde se desea calcular el mcm haciendo uso de la función recursiva
+            mcm = minimoComunMultiploRecursivo(x,y,iterador) # Llamado de la función minimoComunMultiplorecursivo y envío de los parámetros x, y, iterador
+            print("El mínimo comun múltiplo calculado con recursividad entre "+str(x)+" y "+str(y)+" es: "+str(mcm))
+    
 
 # Punto 6
 Desarrollar un programa que determine si en una lista no existen elementos repetidos.
+
 1. El primer paso para este punto crear una función con la cual haremos nuestra lista. Creamos una lista vacía y en la variable t almacenamos el número de datos que deseamos tenga la lista. Luego a partir de un ciclo for los elementos son ingresados en la lista.
+![Punto 6 1](https://user-images.githubusercontent.com/124607325/236653670-4a33b6fd-2ba2-4d4d-a59c-ee3d4bf4a6bc.png)
+
 2. Ya con la lista creada con otro ciclo for la recorremos y con la función integrada cunt() obtendremos el número de cada elemento.
+![punto 6 2](https://user-images.githubusercontent.com/124607325/236653632-92196dc0-12e7-49f2-a447-c24261926239.png)
+
 3. Establecemos una bandera q en caso de ser igual a uno el programa imprimirá que no hay elementos repetidos en la lista, de lo contrario imprimirá que existen elementos repetidos.
+![punto 6 3](https://user-images.githubusercontent.com/124607325/236653663-4e24ca45-657a-45bb-a59a-d361783ac2ba.png)
+
 
 #### Código:
         
@@ -243,154 +315,44 @@ Desarrollar un programa que dadas dos listas determine que elementos tiene la pr
            
  # Punto 9
  Resolver el punto 7 del taller 1 usando operaciones con vectores.
- 1. En este punto lo primero que hicimos fue una función para crear el vector con 5 elementos.
- 2. Llamamos a nuestra función 
- 3. Para el promedio utilizamos la función sum() para conocer la sumatoria de los números y luego dividimos entre 5
- 4. Para el promedio multiplicativo empleamos un ciclo for para multiplocar todos números del vector. Luego le hallamos la ríz quinta al resultado.
- 5. Con la función sort() organizamos los elementos e orden ascendente, con los números organizados de esta manera imprimimos el número que ocupa la posición dos que sería el elemento cetral y por tanto la mediana. 
-6. Utilizando reverse los reorganizamos en orden descendente.
-7. Con los elementos organizados de esta manera ubicamos el menor, que corresponderá al índice [5-1], o sea estará ubicado de último mientras q el índice cero será el mayor. Elevamos el mayor número a la potencia del menor.
-8. Con esta misma lógica al menor número se le halla la raíz cuadrada elevándolo a la 1/3.
  
- 
-        def Crear_vector (elementos: float) -> list:
-            v = [] #Crear un arreglo vacío para el vector
-            for i in range (5): # Ciclo for para ingresar los elementos que formarán el vector
-                elementos = float(input("Inserta elementos del vector: "))
-                v.append(elementos)
-            return v
-        if __name__ == "__main__":
-            elementos = 0
-            v = Crear_vector(elementos)
-            print("Vector: " + str(v)) 
-    
-            #El promedio
-            sumatoria = sum(v) #Es la suma de todos los elementos del vector dividido entre la cantidad de elementos. Se utiliza la                   función sum() 
-            promedio = sumatoria/5
-            print("El promedio es: " + str(promedio))
+ #### Código:
+    v = [] #Crear un arreglo vacío para el vector
+    for i in range (5): # Ciclo for para ingresar los elementos que formarán el vector
+        elementos = int(input("Inserta elementos del vector: "))
+        v.append(elementos)
+    print(v)
 
-            #El promedio multiplicativo (multilplica todos y luego calcula la raíz de la cantidad de operandos)
-            mult = 1
-            for i in v:#Ciclo for para multiplicar todos los elementos dentro del arreglo y luego se halla la raíz 5ta, ya que son 5                   operandos.
-            mult *= i 
-            promedio_multiplicativo = mult**(1/5)
-            print("El promedio multiplicativo es:" + str(promedio_multiplicativo))
+    #El promedio
+    sumatoria = sum(v) #Es la suma de todos los elementos del vector dividido entre la cantidad de elementos. Se utiliza la función sum() 
+    promedio = sumatoria/5
+    print("El promedio es: " + str(promedio))
 
-            # Ordenar los números de forma ascendente
-            v.sort()
-            print("Números ordenados de forma ascendente: " + str(v))
+    #El promedio multiplicativo (multilplica todos y luego calcula la raíz de la cantidad de operandos)
+    mult = 1
+    for i in v:#Ciclo for para multiplicar todos los elementos dentro del arreglo y luego se halla la raíz 5ta, ya que son 5 operandos.
+        mult *= i 
+        promedio_multiplicativo = mult**(1/5)
+    print("El promedio multiplicativo es:" + str(promedio_multiplicativo))
 
-            #La mediana
-            print("La mediana es: " + str(v[2])) # Como el vector tiene 5 elementos la mediana será el valor que ocupe la tercera posición             una vez ordenados estos de menor a mayor
+    # Ordenar los números de forma ascendente
+    v.sort()
+    print("Números ordenados de forma ascendente: " + str(v))
 
-            #Ordenar los números de forma descendente
-            v.sort(reverse = True) 
-            print("Números ordenados de forma descendente: " + str(v))
+    #La mediana
+    print(v[3]) # Como el vector tiene 5 elementos la mediana será el valor que ocupe la tercera posición una vez ordenados estos de menor     a mayor
 
-            #La potencia del mayor número elevado al menor número
-            potencia: float = v[0]**v[4] #En este caso basado en el orden que se le dio al arreglo en el paso anterior se realiza la                   operación de potenciación indicando como base el primer elemento de la lista y como exponente el último
-            print("Potencia del mayor número elevado al menor número: " +  str(potencia))
+    #Ordenar los números de forma descendente
+    v.sort(reverse = True) 
+    print("Números ordenados de forma descendente: " + str(v))
 
-            #La raíz cúbica del menor número
-            raiz_cubica = v[4]**(1/3) # Como los números fueron ordenados de mayor a menor anteriormente, solo se debe hallar la raíz del             último elemento en el arreglo
-            print("Raíz cúbica del menor número: " + str(raiz_cubica))
-            
-# Punto 10
-Desarrollar un algoritmo que determine si una matriz es mágica. Se dice que una matriz cuadrada es mágica si la suma de cada una de sus filas, de cada una de sus columnas y de cada diagonal es igual.
+    #La potencia del mayor número elevado al menor número
+    potencia: float = v[0]**v[4] #En este caso basado en el orden que se le dio al arreglo en el paso anterior se realiza la operación de     potenciación indicando como base el primer elemento de la lista y como exponente el último
+    print("Potencia del mayor número elevado al menor número: " +  str(potencia))
 
-1. El primer paso será crear una función la cual realizará el llenado de la matriz de tamaño n, el cual será asignado por el usuario y se enviará como parámetro a la función. Primero se hará el llenado de las filas, donde cada elementos se guradará en la variable "num" y se utilizará el método .append para agregar este valor al final de la lista. Después de esto agregaremos cada fila a nuestra matriz haciendo nuevamente uso del método append. La función retornará la matriz creada 
+    #La raíz cúbica del menor número
+    raiz_cubica = v[4]**(1/3) # Como los números fueron ordenados de mayor a menor anteriormente, solo se debe hallar la raíz del último       elemento en el arreglo
+    print("Raíz cúbica del menor número: " + str(raiz_cubica))
 
-2. En el segundo paso, crearemos otra función la cual tendrá como objetivo imprimir la matriz anteriormente llenada y recibida como parámetro en esta nueva función. Imprimiremos fila por fila de la matriz haciendo uso del ciclo for; esto para que al momento de imprimirse se pueda visualizar como una matriz. 
 
-3. Como tercer paso lo que haremos será crear una nueva función que determine si la matriz ingresada anteriormente, es una matriz mágica, esto se consigue realizando la suma de cada una de las filas, columnas, la diagonal principal y la diagonal secundaria. Si cada una de estas sumas nos da como resultado el valor de n * ( n ^ 2 + 1 ) // 2 siendo n el tamaño de la matriz (La cual debe ser cuadrada y no tener elementos repetidos), podremos decir que la matriz es mágica. En caso de que todas las sumas den como resultado el valor anteriormente mencionado, retornaremos una variable bandera como True. Y en caso de no serlo retornaremos una variable bandera como False. 
 
-4. Posteriormente crearemos una nueva función que determinará si en la matriz existen elementos repetidos, esto, guardando todos los elementos en una lista y luego verificando que cada uno de los elementos se encuentre solo una vez en dicha lista haciendo uso del método .count. Si efectivamente solo se encuentran una vez, existe la posibilidad de que la matriz sea mágica y retornaremos una variable bandera como True; Sin embargo, si al menos un elemento se repite en la lista podremos decir que la matriz no es mágica y retornaremos una variable bandera como False.
-
-5. Por último, definiremos una función main en donde asignaremos el tamaño de la matriz, para luego enviar este valor como parámetro a las funciones correspondientes. Realizaremos el llamado de las 4 funciones creadas y haremos las validacionesde las banderas retornadas por las funciones "matrizMagica" y "elementosRepetidos". En caso de que ambas banderas sean verdaderas mostraremos unmensaje indicando que la matriz ingresada es mágica. En caso de que la bandera de "matrizMagica" sea falsa pero la bandera de "elementosrepetidos" sea verdadera, mostraremos un mensaje indicando que la matriz ingresada no es mágica. Y, en caso de que la bandera de "elementosRepetidos" sea falsa mostraremos que la matriz no es mágica debido a que existen elementos repetidos
-
-#### Código:
-    def crearMatriz(n:int) -> list:
-        # Función que realiza el llenado de una matriz cuadrada de tamaño n recibido como parámetro 
-        matriz = [] # Creación de la matriz a la cual se le agregarán las fulas con los elementos 
-        fila = [] # Creación de la fila en donde agregaremos los elementos 
-        for i in range(n):
-            for j in range(n):
-                num = float(input("Ingrese el elemento ["+str(i+1)+"]["+str(j+1)+"] : ")) # Ingreso de los elementos que compondrán a las         filas y despues a la matriz
-                fila.append(num) # Adición de cada uno de los elementos al final de la fila 
-            matriz.append(fila) # Adición de cada fila al final de la matriz
-            fila = [] # Vaciado de la fila para que pueda volver a ser llenada
-        return matriz # Retorno de la matriz creada
-
-    def imprimirMatriz(n:int,matriz:list):
-        # Función que imprime las filas de una matriz recibida como parámetro de tamaño n también recibido como parámetro
-        for i in range(n): print(matriz[i]) # Impresión de cada fila de la matriz
-
-    def matrizMagica(n:int,matriz:list) -> bool:
-        # Función que realiza la sumatoria de las filas, columnas y diagonales de una matriz recibida como parámetro y comprueba si cada           suma es igual a n * ( n ** 2 + 1 ) // 2 siendo n el tamaño de la matriz recibido como parámetro 
-        sumaFilas = 0 
-        sumaColumnas = 0 
-        sumaDiagonal1 = 0 
-        sumaDiagonal2 = 0 
-        bandera = True 
-        sumaMagica = n * ( n ** 2 + 1 ) // 2 # Formula que indica el resultado que debe tener cada suma de filas, columnas y diagonales           para que la matriz se considere como mágica
-
-        for i in range(n):
-            for j in range(n):
-                sumaFilas = sumaFilas + matriz[i][j] # Cálculo de la sumatoria de cada una de las filas de la matriz
-            if sumaFilas != sumaMagica: # Comparación del resultado de la suma de filas con el valor que debería ser para que se considere             la matriz como mágica
-                bandera = False
-                break 
-            sumaFilas = 0
-
-        for i in range(n):
-            for j in range(n):
-                sumaColumnas = sumaColumnas + matriz[j][i] # Cálculo de la sumatoria de cada una de las columnas de la matriz
-            if sumaColumnas != sumaMagica: # Comparación del resultado de la suma de filas con el valor que debería ser para que se                   considere la matriz como mágica
-                bandera = False
-                break
-            sumaColumnas = 0 
-    
-        for i in range(n):
-            for j in range(n):
-                if i == j:
-                    sumaDiagonal1 = sumaDiagonal1 + matriz[i][j] # Cálculo de la sumatoria de la diagonal principal de la matriz
-        if sumaDiagonal1 != sumaMagica: # Comparación del resultado de la suma de filas con el valor que debería ser para que se considere         la matriz como mágica
-            bandera = False
-
-        for i in range(n):
-            sumaDiagonal2 = sumaDiagonal2 + matriz[i][n-i-1] # Cálculo de la sumatoria de la diagonal secundaria de la matriz
-        if sumaDiagonal2 != sumaMagica: # Comparación del resultado de la suma de filas con el valor que debería ser para que se considere         la matriz como mágica
-            bandera = False
-
-        return bandera 
-
-    def elementosRepetidos(n:int,matriz:list) -> bool:
-        # Función que comprueba si los elementos ingresados en un matriz recibida como parámetros se repiten  
-        repetidos = [] # creación de una lista vacia a la cual ingresaremos los datos de la matriz y comprobaremos si sus elementos se             repiten 
-        for i in range(n): 
-            for j in range(n):
-                 repetidos.append(matriz[i][j]) # Ingreso de los elementos de la matriz a la lista 
-
-        for i in repetidos:
-            if repetidos.count(i) == 1: # Validación de que cada elemento en la lista exista solo una vez, en caso de serlo bandera = True         y en caso de no serlo bandera = False
-                bandera = True
-            else: 
-                bandera = False 
-                break
-        return bandera # Retorno del valor de bandera 
-    
-
-    if __name__ == "__main__":
-        n = int(input("Ingrese el tamaño de la matriz: ")) # Ingreso del tamaño que tendrá la matriz (para que pueda ser mágica debe ser           cuadarada)
-        matrizM = crearMatriz(n) # Llamado de la función crearMatriz y envío del parámetro n 
-        print("\nMATRIZ INGRESADA") 
-        imprimirMatriz(n,matrizM) # Impresión de la matriz haciendo el llamado de la función imprimirMatriz y envío de los parámtros n y           matrizM
-        magica = matrizMagica(n,matrizM) # Comprobación de que la matriz sea mágica haciendo el llamado de la función matrizMagica y envio         de los parámetros n y matrizM
-        elementos = elementosRepetidos(n,matrizM) # Comprobación de que no existan elementos repetidos en la matriz haciendo el llamado de         la función elementosRepetidos y envio de los parámetros n y matrizM
-        if elementos == True: # Validación de que no existan elementos repetidos en la matriz, en caso de que si se repitan, la matriz no         podrá ser mágica
-            if magica == True: # Validación de que la matriz sea mágica 
-                print("\nLa matriz ingresada es mágica")
-            else:
-                print("\nLa matriz ingresada no es mágica")
-        else:
-            print("\nLa matriz ingresada no es mágica debido a que hay elementos repetidos")
