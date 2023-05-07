@@ -1,5 +1,9 @@
 # Taller-2
 
+# Logo 
+
+[![Atack-on-Codding-edited.jpg](https://i.postimg.cc/c47bzvy0/Atack-on-Codding-edited.jpg)](https://postimg.cc/jL5cwdSF)
+
 # Punto 1 
 
 Desarrollar un programa que ingrese un número entero n y separe todos los digitos que componen el número.
@@ -180,6 +184,21 @@ Diseñar una función que permita calcular una aproximación de la función cose
 # Punto 5
 Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos numeros enteros. Abordar el problema desde la perpectiva iterativa como recursiva.
 
+1.En este punto primero se abordó el cálculo del mcm desde la perspectiva iterativa. Se crea una función que recibirá como parámetros os números a los q se les desea calcular el mcm y la cantidad de iteraciones (estas estarán dadas por la comparación del mayor entre ambos números). En cada iteración se divide i entre x y y, usando un condicional se determina que i es múltiplo de ambos números si su módulo es cero al dividir entre ambos números, de lo contrario se suma uno a i y continúa el ciclo. Al finalizar la función retorna el valor final de i.
+
+[![recursiva.png](https://i.postimg.cc/GppYC54q/recursiva.png)](https://postimg.cc/QFRVgSkT)
+
+2.Desde la perspectiva recursiva igualmente se define la función, que va a recibir los mismos parámetros mencionados anteriormente. Luego planteamos un caso base en que x o y es igual a uno. Se plantea el condicional de que si el módulo de i entre x y y es cero entonces i es múltiplo, de lo contrario se altera el valor de i en 1.
+
+[![recursiva.png](https://i.postimg.cc/GppYC54q/recursiva.png)](https://postimg.cc/QFRVgSkT)
+
+3.El usuario podrá seleccionar cuál de las funciones desea utilizar para lo cual podrá elegir las opciones uno o dos definidas en la función principal como True. Si no ingresa una opción válida se imprimirá un mensaje.
+
+[![image-3.png](https://i.postimg.cc/ZqDNKx3Z/image-3.png)](https://postimg.cc/f3my8XBg)
+
+
+
+#### Código:
     def minimoComunMultiploIterativo(x:int,y:int,iterador:int) -> int:
         # Función que calcula el mínimo común multiplo de dos números recibidos como parámetros por medio de las iteraciones 
         i = iterador # Inicialización de un iterador que comienza desde el número mayor entre x y 
@@ -355,20 +374,32 @@ Desarrollar un programa que dadas dos listas determine que elementos tiene la pr
  Resolver el punto 7 del taller 1 usando operaciones con vectores.
  
  1. En este punto lo primero que hicimos fue una función para crear el vector con 5 elementos.
+![9 1 ](https://user-images.githubusercontent.com/124607325/236654825-494f3418-41b7-45f9-a519-c5ed3f5a8959.png)
 
  2. Llamamos a nuestra función
 
  3. Para el promedio utilizamos la función sum() para conocer la sumatoria de los números y luego dividimos entre 5
+ ![9 2](https://user-images.githubusercontent.com/124607325/236654832-34f9b518-1a76-4bbd-b2bb-31a34be1d75d.png)
+
 
  4. Para el promedio multiplicativo empleamos un ciclo for para multiplocar todos números del vector. Luego le hallamos la ríz quinta al resultado.
+ ![9 3](https://user-images.githubusercontent.com/124607325/236654860-6bf0ebe4-eca1-43a3-8251-732ff1aafaa4.png)
+
 
  5. Con la función sort() organizamos los elementos e orden ascendente, con los números organizados de esta manera imprimimos el número que ocupa la posición dos que sería el elemento cetral y por tanto la mediana.
+![9 3](https://user-images.githubusercontent.com/124607325/236654896-2f9980c7-dd81-4c11-8b14-1abf63cffa5a.png)
+
 
  6. Utilizando reverse los reorganizamos en orden descendente.
+ ![9 5](https://user-images.githubusercontent.com/124607325/236654918-2cd18976-a9fc-40f0-b106-9f25f3c2529e.png)
+
 
  7. Con los elementos organizados de esta manera ubicamos el menor, que corresponderá al índice [5-1], o sea estará ubicado de último mientras q el índice cero será el mayor. Elevamos el mayor número a la potencia del menor.
+ ![9 6](https://user-images.githubusercontent.com/124607325/236654935-65a670f5-7c5a-49aa-a2bd-e1a24b46dda0.png)
+
 
  8. Con esta misma lógica al menor número se le halla la raíz cuadrada elevándolo a la 1/3.
+ ![9 7](https://user-images.githubusercontent.com/124607325/236654944-f16f18e2-8666-4da9-a888-63ef824ae9f0.png)
  
  #### Código:
     v = [] #Crear un arreglo vacío para el vector
@@ -411,15 +442,25 @@ Desarrollar un programa que dadas dos listas determine que elementos tiene la pr
 # Punto 10
 Desarrollar un algoritmo que determine si una matriz es mágica. Se dice que una matriz cuadrada es mágica si la suma de cada una de sus filas, de cada una de sus columnas y de cada diagonal es igual.
 
-1. El primer paso será crear una función la cual realizará el llenado de la matriz de tamaño n, el cual será asignado por el usuario y se enviará como parámetro a la función. Primero se hará el llenado de las filas, donde cada elementos se guradará en la variable "num" y se utilizará el método .append para agregar este valor al final de la lista. Después de esto agregaremos cada fila a nuestra matriz haciendo nuevamente uso del método append. La función retornará la matriz creada 
+1. El primer paso será crear una función la cual realizará el llenado de la matriz de tamaño n, el cual será asignado por el usuario y se enviará como parámetro a la función. Primero se hará el llenado de las filas, donde cada elementos se guradará en la variable "num" y se utilizará el método .append para agregar este valor al final de la lista. Después de esto agregaremos cada fila a nuestra matriz haciendo nuevamente uso del método append. La función retornará la matriz creada. 
+
+![image](https://user-images.githubusercontent.com/124721286/236654786-29fa9511-6619-45dc-ada1-ecbae1c0650c.png)
 
 2. En el segundo paso, crearemos otra función la cual tendrá como objetivo imprimir la matriz anteriormente llenada y recibida como parámetro en esta nueva función. Imprimiremos fila por fila de la matriz haciendo uso del ciclo for; esto para que al momento de imprimirse se pueda visualizar como una matriz. 
 
+![image](https://user-images.githubusercontent.com/124721286/236654796-a375c0a4-e0f3-4cb1-97fa-13a561290f27.png)
+
 3. Como tercer paso lo que haremos será crear una nueva función que determine si la matriz ingresada anteriormente, es una matriz mágica, esto se consigue realizando la suma de cada una de las filas, columnas, la diagonal principal y la diagonal secundaria. Si cada una de estas sumas nos da como resultado el valor de n * ( n ^ 2 + 1 ) // 2 siendo n el tamaño de la matriz (La cual debe ser cuadrada y no tener elementos repetidos), podremos decir que la matriz es mágica. En caso de que todas las sumas den como resultado el valor anteriormente mencionado, retornaremos una variable bandera como True. Y en caso de no serlo retornaremos una variable bandera como False. 
+
+![image](https://user-images.githubusercontent.com/124721286/236654807-a2682481-9ee1-4c38-916e-a8d931991296.png)
 
 4. Posteriormente crearemos una nueva función que determinará si en la matriz existen elementos repetidos, esto, guardando todos los elementos en una lista y luego verificando que cada uno de los elementos se encuentre solo una vez en dicha lista haciendo uso del método .count. Si efectivamente solo se encuentran una vez, existe la posibilidad de que la matriz sea mágica y retornaremos una variable bandera como True; Sin embargo, si al menos un elemento se repite en la lista podremos decir que la matriz no es mágica y retornaremos una variable bandera como False.
 
+![image](https://user-images.githubusercontent.com/124721286/236654818-66ccf3ed-bf36-44de-9733-8314b6f380d6.png)
+
 5. Por último, definiremos una función main en donde asignaremos el tamaño de la matriz, para luego enviar este valor como parámetro a las funciones correspondientes. Realizaremos el llamado de las 4 funciones creadas y haremos las validacionesde las banderas retornadas por las funciones "matrizMagica" y "elementosRepetidos". En caso de que ambas banderas sean verdaderas mostraremos unmensaje indicando que la matriz ingresada es mágica. En caso de que la bandera de "matrizMagica" sea falsa pero la bandera de "elementosrepetidos" sea verdadera, mostraremos un mensaje indicando que la matriz ingresada no es mágica. Y, en caso de que la bandera de "elementosRepetidos" sea falsa mostraremos que la matriz no es mágica debido a que existen elementos repetidos
+
+![image](https://user-images.githubusercontent.com/124721286/236654828-b1328ff3-b55d-420c-957b-51c74eba9fd6.png)
 
 #### Código:
     def crearMatriz(n:int) -> list:
