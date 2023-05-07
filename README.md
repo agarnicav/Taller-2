@@ -119,7 +119,7 @@ Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos n
 3. El usuario podrá seleccionar cual de las funciones desea utilizar para lo cual podrá elegir las opciones uno o dos definidas en la función principal como True. Si no ingresa una opción válida se imprimirá un mensaje.
 def minimoComunMultiploIterativo(x:int,y:int,iterador:int) -> int:
     
-    # Función que calcula el mínimo común multiplo de dos números recibidos como parámetros por medio de las iteraciones 
+        # Función que calcula el mínimo común multiplo de dos números recibidos como parámetros por medio de las iteraciones 
         i = iterador # Inicialización de un iterador que comienza desde el número mayor entre x y 
         bandera = True
         while bandera:
