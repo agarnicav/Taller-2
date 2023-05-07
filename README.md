@@ -243,43 +243,57 @@ Desarrollar un programa que dadas dos listas determine que elementos tiene la pr
            
  # Punto 9
  Resolver el punto 7 del taller 1 usando operaciones con vectores.
+ 1. En este punto lo primero que hicimos fue una función para crear el vector con 5 elementos.
+ 2. Llamamos a nuestra función 
+ 3. Para el promedio utilizamos la función sum() para conocer la sumatoria de los números y luego dividimos entre 5
+ 4. Para el promedio multiplicativo empleamos un ciclo for para multiplocar todos números del vector. Luego le hallamos la ríz quinta al resultado.
+ 5. Con la función sort() organizamos los elementos e orden ascendente, con los números organizados de esta manera imprimimos el número que ocupa la posición dos que sería el elemento cetral y por tanto la mediana. 
+6. Utilizando reverse los reorganizamos en orden descendente.
+7. Con los elementos organizados de esta manera ubicamos el menor, que corresponderá al índice [5-1], o sea estará ubicado de último mientras q el índice cero será el mayor. Elevamos el mayor número a la potencia del menor.
+8. Con esta misma lógica al menor número se le halla la raíz cuadrada elevándolo a la 1/3.
  
- #### Código:
+ 
+def Crear_vector (elementos: float) -> list:
+
     v = [] #Crear un arreglo vacío para el vector
     for i in range (5): # Ciclo for para ingresar los elementos que formarán el vector
-        elementos = int(input("Inserta elementos del vector: "))
+        elementos = float(input("Inserta elementos del vector: "))
         v.append(elementos)
-    print(v)
-
-    #El promedio
+    return v
+if __name__ == "__main__":
+    elementos = 0
+    v = Crear_vector(elementos)
+    print("Vector: " + str(v)) 
+    
+#El promedio
     sumatoria = sum(v) #Es la suma de todos los elementos del vector dividido entre la cantidad de elementos. Se utiliza la función sum() 
     promedio = sumatoria/5
     print("El promedio es: " + str(promedio))
 
-    #El promedio multiplicativo (multilplica todos y luego calcula la raíz de la cantidad de operandos)
+#El promedio multiplicativo (multilplica todos y luego calcula la raíz de la cantidad de operandos)
     mult = 1
     for i in v:#Ciclo for para multiplicar todos los elementos dentro del arreglo y luego se halla la raíz 5ta, ya que son 5 operandos.
         mult *= i 
         promedio_multiplicativo = mult**(1/5)
     print("El promedio multiplicativo es:" + str(promedio_multiplicativo))
 
-    # Ordenar los números de forma ascendente
+# Ordenar los números de forma ascendente
     v.sort()
     print("Números ordenados de forma ascendente: " + str(v))
 
-    #La mediana
-    print(v[3]) # Como el vector tiene 5 elementos la mediana será el valor que ocupe la tercera posición una vez ordenados estos de menor     a mayor
+#La mediana
+    print("La mediana es: " + str(v[2])) # Como el vector tiene 5 elementos la mediana será el valor que ocupe la tercera posición una vez ordenados estos de menor a mayor
 
-    #Ordenar los números de forma descendente
+#Ordenar los números de forma descendente
     v.sort(reverse = True) 
     print("Números ordenados de forma descendente: " + str(v))
 
-    #La potencia del mayor número elevado al menor número
-    potencia: float = v[0]**v[4] #En este caso basado en el orden que se le dio al arreglo en el paso anterior se realiza la operación de     potenciación indicando como base el primer elemento de la lista y como exponente el último
+#La potencia del mayor número elevado al menor número
+    potencia: float = v[0]**v[4] #En este caso basado en el orden que se le dio al arreglo en el paso anterior se realiza la operación de potenciación indicando como base el primer elemento de la lista y como exponente el último
     print("Potencia del mayor número elevado al menor número: " +  str(potencia))
 
-    #La raíz cúbica del menor número
-    raiz_cubica = v[4]**(1/3) # Como los números fueron ordenados de mayor a menor anteriormente, solo se debe hallar la raíz del último       elemento en el arreglo
+#La raíz cúbica del menor número
+    raiz_cubica = v[4]**(1/3) # Como los números fueron ordenados de mayor a menor anteriormente, solo se debe hallar la raíz del último elemento en el arreglo
     print("Raíz cúbica del menor número: " + str(raiz_cubica))
 
 
