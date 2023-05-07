@@ -114,7 +114,9 @@ Diseñar una función que permita calcular una aproximación de la función cose
 
 # Punto 5
 Desarrollar un programa que permita determinar el Minimo Comun Multiplo de dos numeros enteros. Abordar el problema desde la perpectiva iterativa como recursiva.
-
+1. En este punto primero se abordó el cálculo del mcm desde la perspectiva iterativa. Se crea una función que recibirá como parámetros os números a los q se les desea calcular el mcm y la cantidad de iteraciones (estas estaran dadas por la comparación del mayor entre ambos números). En cada iteración se divide i entre x y y, usando un condicional se determina que i es múltiplo de ambos números si su módulo es cero al dividir entre ambos números, de lo contrario se suma uno a i y continúa el ciclo. Al finalizar la función retorna el valor final de i.
+2. Desde la perspectiva recursiva igualmente se define la función, que va a recibir los mismos parámetros mencionados anteriormente. Luego planteamos un caso base en que x o y es igual a uno. Se plantea el condicional de que si el módulo de i entre x y y es cero entonces i es múltiplo, de lo contrario se altera el valor de i en 1. 
+3. El usuario podrá seleccionar cual de las funciones desea utilizar para lo cual podrá elegir las opciones uno o dos definidas en la función principal como True. Si no ingresa una opción válida se imprimirá un mensaje.
 
 
 # Punto 6
