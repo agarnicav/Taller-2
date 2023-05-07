@@ -253,13 +253,12 @@ Desarrollar un programa que dadas dos listas determine que elementos tiene la pr
 8. Con esta misma lógica al menor número se le halla la raíz cuadrada elevándolo a la 1/3.
  
  
-    def Crear_vector (elementos: float) -> list:
-
-        v = [] #Crear un arreglo vacío para el vector
-        for i in range (5): # Ciclo for para ingresar los elementos que formarán el vector
-            elementos = float(input("Inserta elementos del vector: "))
-            v.append(elementos)
-        return v
+        def Crear_vector (elementos: float) -> list:
+            v = [] #Crear un arreglo vacío para el vector
+            for i in range (5): # Ciclo for para ingresar los elementos que formarán el vector
+                elementos = float(input("Inserta elementos del vector: "))
+                v.append(elementos)
+            return v
     if __name__ == "__main__":
         elementos = 0
         v = Crear_vector(elementos)
